@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 #
 # checker.py
-# Restrictions on mailbox fields
+# Restrictions on items
 #
-# Author: Yun Li <Yun_Li1@DellTeam.com>
+# Author: Zex <top_zlynch@yahoo.com>
 #
 import re
    
