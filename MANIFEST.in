@@ -1,0 +1,2 @@
+recursive-include checker *
+include README.md
