@@ -171,6 +171,11 @@ class mac_chk(string_chk):
 
     def __set__(self, obj, entry):
 
+        if entry is None or len(entry) == 0:
+
+            self._value = ''
+            return
+
         super(mac_chk, self).__set__(obj, entry)
 
         if len(entry) and not self.reobj.match(entry):
