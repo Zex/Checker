@@ -9,7 +9,7 @@ import re
    
 class checker(property):
     """
-    Schema related restrictions
+    Item restrictions
 
     @ilen   length of one item, 0 for unlimited
     @nr     number of items, 0 for unlimited 
