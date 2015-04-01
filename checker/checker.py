@@ -149,10 +149,14 @@ class list_of_string_chk(list_chk):
 
 class dotted_ip_chk(string_chk):
 
-    reobj = re.compile('^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$')
+    def __init__(self, func):
+    
+        super(dotted_ip_chk, self).__init__(obj, entry)
 
-    ilen = 15
-    nr   = 1
+        self.reobj = re.compile('^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$')
+
+        self.ilen = 15
+        self.nr   = 1
 
     def __set__(self, obj, entry):
 
@@ -165,9 +169,14 @@ class dotted_ip_chk(string_chk):
 
 class mac_chk(string_chk):
 
-    reobj = re.compile('^([0-9A-Fa-f]{2}[.:-]{0,1}){6}$')
-    ilen  = 17
-    nr    = 1
+
+    def __init__(self, func):
+    
+        super(mac_chk, self).__init__(obj, entry)
+
+        self.reobj = re.compile('^([0-9A-Fa-f]{2}[.:-]{0,1}){6}$')
+        self.ilen  = 17
+        self.nr    = 1
 
     def __set__(self, obj, entry):
 
